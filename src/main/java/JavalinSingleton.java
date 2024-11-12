@@ -38,7 +38,7 @@ public class JavalinSingleton {
         app.post("/changeartisttobeatles", ctx -> {
 
             //implement logic here
-            Song song = pm.readValue(ctx.body(), Song.class);
+            Song song = om.readValue(ctx.body(), Song.class);
             song.setArtistName("Beatles");
             ctx.json(song);
                
